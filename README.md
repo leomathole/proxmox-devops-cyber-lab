@@ -1,34 +1,66 @@
-<<<<<<< HEAD
-\# Proxmox DevOps \& Cybersecurity Lab
+# Proxmox DevOps & Cybersecurity Lab
+
+## Overview
+This repository documents a private cloud lab environment built on **Proxmox VE**, showcasing **DevOps automation** and **Cybersecurity monitoring**.  
+It demonstrates enterprise‑style infrastructure using **IaC (Terraform + Ansible)**, **K3s HA clusters**, **Wazuh SIEM**, **GitLab CI/CD**, and **Prometheus/Grafana** monitoring.
+
+The project is designed as my portfolio artifact, proving hands‑on capability in virtualization, orchestration, automation, and security.
 
 
 
-\## Overview
-
-Private cloud lab with Proxmox VE, IaC (Terraform + Ansible), K3s HA, Wazuh SIEM, and GitLab CI/CD.
-
-
-
-\## Modules
-
-\- Module 1: Network \& Hypervisor Foundation
-
-\- Module 2: Shared Services \& Storage
-
-\- Module 3: Infrastructure as Code
-
-\- Module 4: Orchestration (K3s)
-
-\- Module 6: High Availability \& SIEM
-
-\- Module 7: CI/CD Pipeline (GitLab)
-
-\- Module 8: Monitoring (Prometheus + Grafana)
+##  Environment & Resource Plan
+- **Host:** Laptop/PC (24GB RAM, 4‑Core CPU, 512GB SSD)
+- **RAM Allocation:**
+  - OPNsense Firewall: 1GB  
+  - NFS Storage (Debian LXC): 512MB  
+  - K3s Cluster (3 Nodes): 12GB (4GB each)  
+  - Wazuh SIEM Manager: 4GB  
+  - GitLab CI/CD: 6GB  
+  - Proxmox Overhead: 4GB  
+  - Buffer: 2GB  
 
 
 
-\## Resource Plan
+## Modules
+- **Module 1:** Network & Hypervisor Foundation (Proxmox + OPNsense)  
+- **Module 2:** Shared Services & Storage (NFS LXC)  
+- **Module 3:** Infrastructure as Code (Terraform + Proxmox API)  
+- **Module 4:** Orchestration (K3s Cluster via Ansible)  
+- **Module 6:** High Availability & SIEM (PostgreSQL DB + Wazuh Manager)  
+- **Module 7:** CI/CD Pipeline (GitLab + Runners)  
+- **Module 8:** Monitoring (Prometheus + Grafana)  
 
-Laptop: 24GB RAM, 4 cores, 512GB SSD
 
->>>>>>> 91b2b8bc7d864ac9d5b6788e1d68a830cb0c4230
+
+## Validation Checklist
+| Component   | Validation Command / Action |
+|-------------|-----------------------------|
+| OPNsense    | `ping 10.10.10.1` |
+| NFS LXC     | `showmount -e 10.10.40.10` |
+| K3s Cluster | `kubectl get nodes` |
+| Wazuh SIEM  | Agents visible in dashboard |
+| GitLab CI/CD| Pipeline runs on commit |
+| Monitoring  | Grafana dashboards show metrics |
+
+
+
+## Technical Skills
+This lab demonstrates:
+- **Virtualization & Networking** (Proxmox, VLANs, OPNsense)  
+- **Automation** (Terraform, Ansible, GitLab CI/CD)  
+- **Resilience** (K3s HA cluster with external DB)  
+- **Security** (Wazuh SIEM integration)  
+- **Observability** (Prometheus + Grafana monitoring)  
+
+## Roles
+- DevOps
+- Cybersecurity
+- SOC Analyst
+- Pen Tester
+- Security Engineer
+
+
+
+## 📜 License
+This project is licensed under the **MIT License**.  
+You are free to use, modify, and share with attribution.
