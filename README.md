@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \# Proxmox DevOps \& Cybersecurity Lab
 
 
@@ -30,3 +31,4 @@ Private cloud lab with Proxmox VE, IaC (Terraform + Ansible), K3s HA, Wazuh SIEM
 
 Laptop: 24GB RAM, 4 cores, 512GB SSD
 
+>>>>>>> 91b2b8bc7d864ac9d5b6788e1d68a830cb0c4230
